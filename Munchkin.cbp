@@ -59,6 +59,9 @@
 		<Unit filename="src/gamemap.cpp" />
 		<Unit filename="src/globals.cpp" />
 		<Unit filename="src/itemshop.cpp" />
+		<Unit filename="src/mapEditor.cpp">
+			<Option link="0" />
+		</Unit>
 		<Unit filename="src/npc.cpp" />
 		<Unit filename="src/player.cpp" />
 		<Unit filename="src/soundsystem.cpp" />
