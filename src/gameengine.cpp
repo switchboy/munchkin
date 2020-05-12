@@ -6,7 +6,7 @@
 #include "gamemap.h"
 #include "npc.h"
 #include "soundsystem.h"
-
+#include "mapEditor.cpp"
 
 Game_Engine Game;
 
@@ -723,7 +723,7 @@ void Game_Engine::menu()
     bool pressed_enter = false;
     bool focus = true;
     int option_selected = 0;
-    int options[4] = {2, 2, 2, 2};
+    int options[4] = {3, 2, 2, 2};
     int low_limit_option[4] = {0, 0, 0, 0};
     int option_level = 0;
     if(this->game_in_progress)
@@ -823,6 +823,9 @@ void Game_Engine::menu()
                     option_selected = 0;
                     break;
                 case 2:
+                    mapEditor();
+                    break;
+                case 3:
                     exit(0);
                     break;
                 case -1:
@@ -922,6 +925,9 @@ void Game_Engine::menu()
                     menu_text = "Options";
                     break;
                 case 2:
+                    menu_text = "Level editor";
+                    break;
+                case 3:
                     menu_text = "Quit";
                     break;
                 }
